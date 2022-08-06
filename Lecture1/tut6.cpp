@@ -11,6 +11,7 @@ class Sample {
 
     void displayAge();// Functions declarations
 };
+
 void Sample::displayAge(){
      cout << "Age = " << age << endl;
 }

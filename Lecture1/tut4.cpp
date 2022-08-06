@@ -18,8 +18,10 @@ class Employee {
 };
 
 int main() {
-  Employee myObj;
-  myObj.setSalary(60000);
-  cout <<"The salary of an employee is: "<<myObj.getSalary()<<endl;
+  Employee emp,emp1,emp2;
+  emp.setSalary(60000);
+  emp1.setSalary(10000);
+  cout <<"The salaries of employees are: "<<emp.getSalary()<<","<<emp1.getSalary()<<"and"<<emp2.getSalary()<<endl;
+
   return 0;
 }

@@ -7,7 +7,7 @@ class complex {
         float real;
         float imag;
     public:
-        void realvalues(){
+        void set_values(){
             cout<<"Enter Real Part: ";
             cin>>real;
             cout<<"Enter Imaginary Part: ";
@@ -21,12 +21,13 @@ class complex {
             imag = c1.imag+c2.imag;
         }
 };
+
 int main(){
     complex c1,c2,c3;
     cout<<"Enter first complex number: "<<endl;
-    c1.realvalues();
+    c1.set_values();
      cout<<"Enter Second complex number: "<<endl;
-    c2.realvalues();
+    c2.set_values();
     // Show values of a complex number
     c1.showvalue();
     cout<<" + ";
