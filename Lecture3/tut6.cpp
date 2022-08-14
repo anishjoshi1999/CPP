@@ -21,6 +21,7 @@ class Integer {
 int main(){
     Integer i1,i2;
     i1.setData(3);
+    // i2 = i1.operator++()
     i2 = ++i1;
     i1.showData();
     i2.showData();
