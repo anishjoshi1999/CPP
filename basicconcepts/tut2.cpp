@@ -2,7 +2,7 @@
 // function with arguments and without return value.
 #include <iostream>
 using namespace std;
-int add(int x,int y){
+void add(int x,int y){
     cout<<"The sum of two numbers is "<<(x+y)<<endl;
 }
 
