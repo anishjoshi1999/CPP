@@ -8,6 +8,9 @@ class base_one {
      base_one(int data){
         cout<<"Hello from base 1 parameterized "<<data<<endl;
     }
+     ~base_one(){
+        cout<<"Hello from base 1 destructor"<<endl;
+    }
 };
 class base_two{
     public:
@@ -16,6 +19,9 @@ class base_two{
     }
      base_two(int data){
         cout<<"Hello from base 2 parameterized "<<data<<endl;
+    }
+     ~base_two(){
+        cout<<"Hello from base 2 destructor"<<endl;
     }
 };
 class derived:public base_one,public base_two{
@@ -26,9 +32,12 @@ class derived:public base_one,public base_two{
      derived(int a,int b,int c):base_one(a),base_two(b){
         cout<<"Hello from derived parameterized constructor"<<c<<endl;
     }
+     ~derived(){
+        cout<<"Hello from derived destructor"<<endl;
+    }
 };
 int main(){
     derived d;
-    derived d1(3,4,5);
+    // derived d1(3,4,5);
     return 0;
 }
