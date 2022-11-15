@@ -1,9 +1,6 @@
 #include <iostream>
 using namespace std;
-int check_loop_value(int value)
-{
-    if ()
-}
+
 int main()
 {
     int n;
