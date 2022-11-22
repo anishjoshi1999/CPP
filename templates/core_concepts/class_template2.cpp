@@ -6,7 +6,7 @@ class info
 public:
     info(T A)
     {
-        cout << "A = " << A << " size of data in bytes:" << sizeof(A) << endl;
+        cout << "A = " << A << " size of data in bytes:" << sizeof(T) << endl;
     }
 };
 

@@ -11,7 +11,12 @@ private:
     V var3;
 
 public:
-    ClassTemplate(T v1, U v2, V v3) : var1(v1), var2(v2), var3(v3) {} // constructor
+    ClassTemplate(T v1, U v2, V v3)
+    {
+        var1 = v1;
+        var2 = v2;
+        var3 = v3;
+    } // constructor
 
     void printVar()
     {
@@ -23,12 +28,9 @@ public:
 
 int main()
 {
-    // create object with int, double and char types
     ClassTemplate<int, double> obj1(7, 7.7, 'c');
     cout << "obj1 values: " << endl;
     obj1.printVar();
-
-    // create object with int, double and bool types
     ClassTemplate<double, char, bool> obj2(8.8, 'a', false);
     cout << "\nobj2 values: " << endl;
     obj2.printVar();
