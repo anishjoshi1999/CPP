@@ -3,47 +3,46 @@ using namespace std;
 class Item
 {
 private:
-    int a, b;
+    int m, n;
 
 public:
-    Item(int x = 0, int y = 0)
+    void setM(int x)
     {
-        a = x;
-        b = y;
+        m = x;
+    }
+    void setN(int y)
+    {
+        n = y;
+    }
+    void showdata()
+    {
+        cout << "m = " << m << " n = " << n;
     }
 };
 class Product
 {
 private:
-    int p, q;
+    int a, b;
 
 public:
     Product(int x = 0, int y = 0)
     {
-        p = x;
-        q = y;
+        a = x;
+        b = y;
     }
-    opeartor Item()
+    operator Item()
     {
         Item temp;
-        temp.a = p;
-        temp.b = q;
+        temp.setM(a);
+        temp.setN(b);
         return temp;
     }
-    void show()
-    {
-        cout << "The value of p is " << p << endl;
-        cout << "The value of q is " << q << endl;
-    }
 };
-
 int main()
 {
-    Item i(3, 4);
-    Product p;
-    // p = i.operator int()
-    p = i;
-    p.show();
-
-    return 0;
+    Item i1;
+    Product p1(20, 25);
+    // i1 = p1.operator Item();
+    i1 = p1;
+    i1.showdata();
 }

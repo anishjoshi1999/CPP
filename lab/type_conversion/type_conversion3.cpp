@@ -1,48 +1,57 @@
 #include <iostream>
 using namespace std;
-class Item
+class Product
 {
 private:
     int m, n;
 
 public:
-    void setM(int x)
+    Product()
+    {
+        m = 0;
+        n = 0;
+    }
+    Product(int x, int y)
     {
         m = x;
-    }
-    void setN(int y)
-    {
         n = y;
     }
-    void showdata()
+    getM()
     {
-        cout << "m = " << m << " n = " << n;
+        return m;
+    }
+    getN()
+    {
+        return n;
     }
 };
-class Product
+class Item
 {
 private:
     int a, b;
 
 public:
-    Product(int x = 0, int y = 0)
+    Item()
     {
-        a = x;
-        b = y;
+        // default constructor
     }
-    operator Item()
+    Item(Product p)
     {
-        Item temp;
-        temp.setM(a);
-        temp.setN(b);
-        return temp;
+        a = p.getM();
+        b = p.getN();
+    }
+    void show()
+    {
+        cout << "The value of a " << a << endl;
+        cout << "The value of b " << b << endl;
     }
 };
+
 int main()
 {
     Item i1;
-    Product p1(20, 25);
-    // i1 = p1.operator Item();
+    Product p1(3, 4);
     i1 = p1;
-    i1.showdata();
+    i1.show();
+    return 0;
 }

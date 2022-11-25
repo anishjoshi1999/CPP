@@ -1,4 +1,3 @@
-/*Type Conversion Primitive to class type*/
 #include <iostream>
 using namespace std;
 class Complex
@@ -21,11 +20,6 @@ public:
         real = r;
         imag = i;
     }
-    void setData(int r, int i)
-    {
-        real = r;
-        imag = i;
-    }
     void show()
     {
         cout << "(" << real << "," << imag << ")" << endl;
@@ -34,11 +28,9 @@ public:
 int main()
 {
     Complex c1;
-    Complex c2(4, 5);
     int x = 10;
     /*Constructors are also called when you assign other datatypes.*/
     c1 = x;
     c1.show();
-    c2.show();
     return 0;
 }
