@@ -1,58 +1,48 @@
-// Type Conversion one class type to another class type
 #include <iostream>
 using namespace std;
-class Product
+class Item
 {
 private:
     int m, n;
 
 public:
-    Product(int x = 0, int y = 0)
+    void setM(int x)
     {
         m = x;
+    }
+    void setN(int y)
+    {
         n = y;
     }
-    int getM()
+    void showdata()
     {
-        return m;
-    }
-    int getN()
-    {
-        return n;
+        cout << "m = " << m << " n = " << n;
     }
 };
-class Item
+class Product
 {
 private:
     int a, b;
 
 public:
-    Item()
+    Product(int x = 0, int y = 0)
     {
-        // default constructor
+        a = x;
+        b = y;
     }
-    Item(Product p)
+    operator Item()
     {
-        a = p.getM();
-        b = p.getN();
-    }
-    void show()
-    {
-        cout << "a = " << a << endl;
-        cout << "b = " << b << endl;
+        Item temp;
+        temp.setM(a);
+        temp.setN(b);
+        return temp;
     }
 };
-
 int main()
 {
     Item i1;
-    Product p1(3, 4);
+    Product p1(20, 25);
+    // i1 = p1.operator Item();
     i1 = p1;
-    i1.show();
-
-    return 0;
+    i1.showdata();
 }
-/*
-Type Conversion one class type to another class type
-Conversion through constructor
-Conversion through casting operators*/
