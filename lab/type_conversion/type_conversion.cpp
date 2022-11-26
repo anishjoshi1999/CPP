@@ -6,15 +6,15 @@ private:
     int real, imag;
 
 public:
-    Complex()
-    {
-        // Default Constructor
-    }
-    Complex(int k)
-    {
-        real = k;
-        imag = 0;
-    }
+    // Complex()
+    // {
+    //     // Default Constructor
+    // }
+    // Complex(int k)
+    // {
+    //     real = k;
+    //     imag = 0;
+    // }
     Complex(int r, int i)
     {
         real = r;
