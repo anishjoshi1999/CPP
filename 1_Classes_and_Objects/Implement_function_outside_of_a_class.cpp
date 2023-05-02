@@ -1,32 +1,26 @@
-// function_outside_class
+// Function_outside_class
 #include <iostream>
 using namespace std;
 
-// define a class
+// Define a class
 class Sample {
-
-    // public elements
+    // Public elements
    public:
     int age;
-
-    void displayAge();// Functions declarations
+    // Functions declarations
+    void displayAge();
 };
 
 void Sample::displayAge(){
      cout << "Age = " << age << endl;
 }
 int main() {
-
-    // declare a class object
+    // Declare a class object
     Sample obj1;
-
     cout << "Enter your age: ";
-
-    // store input in age of the obj1 object
+    // stores the value of ages inside age attribute of class Sample
     cin >> obj1.age;
-
-    // call class function
+    // called a method of a class Sample
     obj1.displayAge();
-
     return 0;
 }

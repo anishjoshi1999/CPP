@@ -1,4 +1,3 @@
-// as_data_type
 #include<iostream>
 using namespace std;
 
@@ -13,7 +12,7 @@ class complex {
             cout<<"Enter Imaginary Part: ";
             cin>>imag;
         }
-        void showvalue(){
+        void show_value(){
             cout<<"("<<real<<","<<imag<<")";
         }
         void add(complex c1, complex c2){
@@ -29,12 +28,12 @@ int main(){
      cout<<"Enter Second complex number: "<<endl;
     c2.set_values();
     // Show values of a complex number
-    c1.showvalue();
+    c1.show_value();
     cout<<" + ";
-    c2.showvalue();
+    c2.show_value();
     c3.add(c1,c2);
     cout<<" = ";
-    c3.showvalue();
+    c3.show_value();
     return 0;
 
 }
