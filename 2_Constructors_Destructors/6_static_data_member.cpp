@@ -3,6 +3,10 @@
 using namespace std;
 
 class Box {
+   private:
+      double length;     // Length of a box
+      double breadth;    // Breadth of a box
+      double height;     // Height of a box
    public:
       static int objectCount;
       
@@ -19,13 +23,8 @@ class Box {
       double Volume() {
          return length * breadth * height;
       }
-      
-   private:
-      double length;     // Length of a box
-      double breadth;    // Breadth of a box
-      double height;     // Height of a box
 };
-
+// The default value of static variable is 0
 // Initialize static member of class Box
 int Box::objectCount = 0;
 
