@@ -1,3 +1,4 @@
+// Adding two different complex numbers and storing them into the third complex number
 #include<iostream>
 using namespace std;
 class Complex {

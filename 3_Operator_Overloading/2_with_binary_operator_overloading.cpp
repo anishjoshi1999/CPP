@@ -11,7 +11,7 @@ class Complex {
     void showData(){
         cout<<"real = "<<real<<" "<<"imag = "<<imag<<endl;
     }
-    Complex sum(Complex c){
+    Complex operator+(Complex c){
         Complex temp;
         temp.real = real + c.real;
         temp.imag = imag + c.imag;
@@ -23,7 +23,8 @@ int main(){
     Complex c1, c2,c3;
     c1.setData(3,4);
     c2.setData(5,6);
-    c3 = c1.sum(c2);
+    c3 = c1+c2;
     c3.showData();
     return 0;
 }
+// End of binary operator overloading
