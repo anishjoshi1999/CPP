@@ -28,6 +28,5 @@ int main(){
     s1.set_course("C++");
     s1.show_name();
     s1.show_course();
-
     return 0;
 }
